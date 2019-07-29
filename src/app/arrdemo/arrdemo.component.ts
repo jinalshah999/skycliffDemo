@@ -27,5 +27,13 @@ export class ArrdemoComponent implements OnInit {
 
       this.arrtask.push(new Task(this.id,this.title,this.status));
   }
+  onEditTaskClick(item:Task){
 
+      if(item.status=='done'){
+        item.status='pending';
+      }
+      else{
+        item.status='done';
+      }
+  }
 }
