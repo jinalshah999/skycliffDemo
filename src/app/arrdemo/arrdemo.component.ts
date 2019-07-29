@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from './task';
 
 @Component({
   selector: 'app-arrdemo',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArrdemoComponent implements OnInit {
 
-  arr:string[]=['jinal','shah','skycliff'];
+  arrtask:Task[]=[
+    new Task('1','push your code to github','done'),
+    new Task('2','learn angular','pending')
+  ];
   constructor() { }
 
   ngOnInit() {

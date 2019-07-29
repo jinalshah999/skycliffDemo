@@ -1,5 +1,16 @@
-<h1>{{arr}}</h1>
+<h1>Task Demo</h1>
 
-<ul>
-  <li *ngFor="let item of arr" >{{item}}</li>
-</ul>
+<table class="table" >
+  <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Status</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of arrtask" >
+    <td>{{item.id}}</td>
+    <td>{{item.title}}</td>
+    <td>{{item.status}}</td>
+  </tr>
+</tbody>
+</table>
