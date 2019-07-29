@@ -1,16 +1,32 @@
 <h1>Task Demo</h1>
+<br>
+<input class="form-control" placeholder="Enter Id" type="text" [(ngModel)]="id" >
+<br>
+<input class="form-control" placeholder="Enter Title" type="text" [(ngModel)]="title" >
+<br>
+<input class="form-control" placeholder="Enter Status" type="text" [(ngModel)]="status" >
+<br>
+<button class="btn btn-primary"  (click)="onAddTaskClick()" >Add Task</button>
 
-<table class="table" >
+<table class="table">
   <thead>
     <th>Id</th>
     <th>Title</th>
     <th>Status</th>
+    <th>Action</th>
   </thead>
   <tbody>
-  <tr *ngFor="let item of arrtask" >
-    <td>{{item.id}}</td>
-    <td>{{item.title}}</td>
-    <td>{{item.status}}</td>
-  </tr>
-</tbody>
+    <tr *ngFor="let item of arrtask">
+      <td>{{item.id}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.status}}</td>
+      <td>
+        <button (click)='deleteTask(item)' type="button" class="btn btn-default" aria-label="Left Align">
+
+          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+
+        </button>
+      </td>
+    </tr>
+  </tbody>
 </table>

@@ -7,7 +7,9 @@ import { Task } from './task';
   styleUrls: ['./arrdemo.component.css']
 })
 export class ArrdemoComponent implements OnInit {
-
+  id:string='';
+  title:string='';
+  status:string='';
   arrtask:Task[]=[
     new Task('1','push your code to github','done'),
     new Task('2','learn angular','pending')
@@ -15,6 +17,15 @@ export class ArrdemoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  deleteTask(item:Task){
+    //console.log(item);
+
+    this.arrtask.splice(this.arrtask.indexOf(item),1);
+  }
+  onAddTaskClick(){
+
+      this.arrtask.push(new Task(this.id,this.title,this.status));
   }
 
 }
