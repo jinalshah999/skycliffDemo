@@ -4,12 +4,14 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { CalcComponent } from './calc/calc.component';
+import { ArrdemoComponent } from './arrdemo/arrdemo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    CalcComponent
+    CalcComponent,
+    ArrdemoComponent
   ],
   imports: [
     BrowserModule,
