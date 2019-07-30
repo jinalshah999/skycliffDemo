@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { CalcComponent } from './calc/calc.component';
 import { ArrdemoComponent } from './arrdemo/arrdemo.component';
+import { ApphighDirective } from './apphigh.directive';
+import { HighlighterDirective } from './highlighter.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
     CalcComponent,
-    ArrdemoComponent
+    ArrdemoComponent,
+    ApphighDirective,
+    HighlighterDirective
   ],
   imports: [
     BrowserModule,

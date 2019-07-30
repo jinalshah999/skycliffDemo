@@ -17,8 +17,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of arrtask">
-      <td>{{item.id}}</td>
-      <td>{{item.title}}</td>
+      <td >{{item.id}}</td>
+      <td  >{{item.title}}</td>
       <td> <span  [ngClass]="{donestatus: item.status=='done',pendingstatus: item.status=='pending' }" > {{item.status}} </span> </td>
       <td>
         <button (click)='deleteTask(item)' type="button" class="btn btn-default" aria-label="Left Align">
