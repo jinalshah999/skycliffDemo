@@ -11,6 +11,7 @@ import { CardDirective } from "./card.directive";
 import { FilterPipe } from "./filter.pipe";
 import { MenuComponent } from "./menu/menu.component";
 import { routing } from "./app.routing";
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { routing } from "./app.routing";
     HighlighterDirective,
     CardDirective,
     FilterPipe,
-    MenuComponent
+    MenuComponent,
+    PagenotfoundComponent
   ],
   imports: [BrowserModule, FormsModule, routing],
   providers: [],
