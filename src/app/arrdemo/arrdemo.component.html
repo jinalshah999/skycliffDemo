@@ -19,7 +19,7 @@
     <tr *ngFor="let item of arrtask">
       <td>{{item.id}}</td>
       <td>{{item.title}}</td>
-      <td>{{item.status}}</td>
+      <td> <span  [ngClass]="{donestatus: item.status=='done',pendingstatus: item.status=='pending' }" > {{item.status}} </span> </td>
       <td>
         <button (click)='deleteTask(item)' type="button" class="btn btn-default" aria-label="Left Align">
 
@@ -35,3 +35,23 @@
     </tr>
   </tbody>
 </table>
+<hr>
+<div *ngIf="flag" >
+  <h1>if block</h1>
+</div>
+
+<div *ngIf="flag;else falseblock" >
+  <h1>if block</h1>
+</div>
+<ng-template #falseblock >
+  <div>
+    <h1>false Block</h1>
+  </div>
+</ng-template>
+
+<div [ngSwitch]="dept_id">
+  <div *ngSwitchCase="1"> <h1> payroll</h1></div>
+  <div *ngSwitchCase="2">IT</div>
+  <div *ngSwitchCase="3">HR</div>
+  <div *ngSwitchDefault>invalid value</div>
+</div>

@@ -7,6 +7,8 @@ import { Task } from './task';
   styleUrls: ['./arrdemo.component.css']
 })
 export class ArrdemoComponent implements OnInit {
+  flag:boolean=true;
+  dept_id:number=5;
   id:string='';
   title:string='';
   status:string='';
