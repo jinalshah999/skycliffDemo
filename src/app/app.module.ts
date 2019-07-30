@@ -8,6 +8,7 @@ import { ArrdemoComponent } from './arrdemo/arrdemo.component';
 import { ApphighDirective } from './apphigh.directive';
 import { HighlighterDirective } from './highlighter.directive';
 import { CardDirective } from './card.directive';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CardDirective } from './card.directive';
     ArrdemoComponent,
     ApphighDirective,
     HighlighterDirective,
-    CardDirective
+    CardDirective,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
