@@ -7,6 +7,8 @@ import { Task } from './task';
   styleUrls: ['./arrdemo.component.css']
 })
 export class ArrdemoComponent implements OnInit {
+  dt:Date=new Date(2019,6,30);
+  no:number=1.25332465;
   flag:boolean=true;
   dept_id:number=5;
   id:string='';

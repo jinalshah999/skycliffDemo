@@ -1,4 +1,6 @@
 <h1>Task Demo</h1>
+<h1>{{no | number:'3.2-2'}}</h1>
+<h1>{{dt | date:'dd/MMM/yy' }}</h1>
 <br>
 <input class="form-control" placeholder="Enter Id" type="text" [(ngModel)]="id" >
 <br>
@@ -17,8 +19,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of arrtask">
-      <td >{{item.id}}</td>
-      <td  >{{item.title}}</td>
+      <td >{{item.id | currency:'INR':'code' }}</td>
+      <td  >{{item.title | titlecase }}</td>
       <td> <span  [ngClass]="{donestatus: item.status=='done',pendingstatus: item.status=='pending' }" > {{item.status}} </span> </td>
       <td>
         <button (click)='deleteTask(item)' type="button" class="btn btn-default" aria-label="Left Align">
@@ -55,3 +57,4 @@
   <div *ngSwitchCase="3">HR</div>
   <div *ngSwitchDefault>invalid value</div>
 </div>
+
