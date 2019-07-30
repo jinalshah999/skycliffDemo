@@ -7,6 +7,7 @@ import { CalcComponent } from './calc/calc.component';
 import { ArrdemoComponent } from './arrdemo/arrdemo.component';
 import { ApphighDirective } from './apphigh.directive';
 import { HighlighterDirective } from './highlighter.directive';
+import { CardDirective } from './card.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HighlighterDirective } from './highlighter.directive';
     CalcComponent,
     ArrdemoComponent,
     ApphighDirective,
-    HighlighterDirective
+    HighlighterDirective,
+    CardDirective
   ],
   imports: [
     BrowserModule,
